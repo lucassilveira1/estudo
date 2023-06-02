@@ -51,3 +51,19 @@ function divisao(x, y) {
 // Invoque a função criada acima, passando os parâmetros 10 e 2.
 
 divisao(10,2)
+
+// criar uma função que recebe 2 posições e 1 lista e retorna soma dos valores dessas posições da lista //
+
+z = [2, 4, 6, 8]
+
+function qualquer(i, j, lista) {
+  var posicaoI = lista[i];
+  var posicaoJ = lista[j];
+
+  return posicaoI+posicaoJ
+}
+
+var resultado = qualquer(1, 3, z)
+console.log(resultado)
+
+//  //
