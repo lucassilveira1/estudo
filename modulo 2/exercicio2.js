@@ -91,6 +91,26 @@ function dunga(a, b, c) {
     return null
   }
 }
+
+//arrow function//
+const lucas = () => {};
+// ----------- //
+
+const funcTeste = (a,b,c) => {
+  if (a) {
+      if (b) {
+          if (c) {
+              return (a + b) / c
+          }
+          return a + b
+      }
+      return a
+  } else {
+      return false;
+  }
+  return null
+}
+
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) 
 // Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
 
