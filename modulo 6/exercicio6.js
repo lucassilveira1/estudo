@@ -14,7 +14,7 @@ Os elementos serão nomes de times do campeonato escolhido, e os nomes devem
 estar na ordem em que eles aparecem na tabela no momento da solução desse
 desafio.
 */
-var teams = ['Vasco', 'Botafogo', 'Flamengo', 'Fluminense', 'América']
+var teams = ['Vasco', 'Botafogo', 'Flamengo', 'Fluminense', 'América', 'Bangu']
 
 console.log( 'Times que estão participando do campeonato:', teams );
 
@@ -36,7 +36,7 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
 */
 
 function showTeamPosition(position) {
-  if(position < 1 || position > 5) {
+  if(position < 1 || position > teams.length) {
     return 'Não temos informação do time que está nessa posição.'
   }
   return 'O time que está em ' + position + 'º lugar é o ' + teams[position - 1] + '.';
@@ -51,16 +51,18 @@ console.log(showTeamPosition(1))
 console.log(showTeamPosition(2))
 console.log(showTeamPosition(3))
 console.log(showTeamPosition(4))
-console.log(showTeamPosition(7))
+console.log(showTeamPosition(6))
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 repetição "while".
 */
 
-var num = 20;
+let num = 20;
 while (num <= 30){
-  console.log(num++);
+  num++;
+  if (num === 25) continue;
+  console.log(num);
 }
 
 /*
@@ -94,7 +96,7 @@ function convertToHex(color) {
       return 'O hexadecimal para a cor ' + color + ' é #000000'
       break;
     default:
-      return 'Não temos o equivalente exadecimal para ' + color + '.';
+      return 'Não temos o equivalente hexadecimal para ' + color + '.';
   }
 }
 
