@@ -59,7 +59,7 @@ os livros.
 */
 
 function book(bookName) {
-  let books = {
+  const books = {
     'Harry Potter': {
       qtdPaginas: 264,
       autor: 'J.K Rowling',
@@ -78,9 +78,14 @@ function book(bookName) {
       editora: 'HarperCollins'
     }
   };
-
   return !bookName ? books : books[bookName]
 };
+
+const a = 0;
+
+a === 0 ? a : 0
+
+a === 0 || 10 ? a : 0
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
@@ -96,7 +101,7 @@ usando a frase:
 
 var bookName = 'O Senhor dos anéis'
 
-console.log('O livro ' + bookName + ' possui ' + book('O Senhor dos Anéis').qtdPaginas + ' páginas!')
+console.log('O livro ' + bookName + ' possui ' + book(bookName).qtdPaginas + ' páginas!')
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
@@ -104,11 +109,11 @@ a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
 
-console.log('O autor do livro ' + bookName + ' é ' + book('O Senhor dos Anéis').autor)
+console.log('O autor do livro ' + bookName + ' é ' + book(bookNamee).autor)
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-console.log('O livro ' + bookName + ' foi publicado pela editora ' + book('O Senhor dos Anéis').editora)
+console.log('O livro ' + bookName + ' foi publicado pela editora ' + book(bookNamee).editora)
