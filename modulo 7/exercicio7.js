@@ -1,3 +1,5 @@
+// TEMAS DO MÓDULO: LENGTH, PUSH E FOR.
+
 /*
 Crie um array com 5 items (tipos variados).
 */
