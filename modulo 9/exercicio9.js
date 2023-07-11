@@ -136,3 +136,20 @@
   }));
 
 })();
+var teste = 2
+
+function teste2() {
+  console.log(teste);
+}
+
+function teste3(param) {
+  return function() {
+    console.log(param)
+  };
+}
+const teste4 = teste3(teste)
+
+teste = teste + 2
+
+console.log(teste2())
+console.log(teste4())

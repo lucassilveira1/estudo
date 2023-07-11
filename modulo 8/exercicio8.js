@@ -6,8 +6,8 @@ Declare uma variável chamada `sum` e atribua a ela uma função chamada
 desses parâmetros.
 */
 
-const sum = calculateSum = (a, b) => {
-return a + b;
+const sum = function calculateSum(a, b) {
+ return a + b;
 }
 
 /*
@@ -126,3 +126,45 @@ console.log(multiplication(5, 10));
 console.log(division(20, 2));
 console.log(mod(100, 10));
 console.log(teste(10, 5));
+
+//
+
+//Criar uma função que retorno um array com os X primeiros números de fibonnaci que são divisíveis por 3
+// 1, 1, 2, 3, 5, 8, 13, 21, 34...
+
+const fibonnaci = (i) => {
+  if (i === 0) return 1
+  if (i === 1) return 1
+  var a = 1
+  var b = 1
+
+  var x = 2
+  while (x <= i) {
+    const t = a
+    a = a + b
+    b = t
+    x = x + 1
+  }
+  return a
+}
+
+
+
+const fibonacci3 = (x) => {
+  const numeros = {result: []};
+  let contador = 0;
+  let i = 0;
+  while(contador < x) {
+    const numero = fibonnaci(i);
+    if (numero % 3 === 0) {
+      numeros.result.push(numero);
+      contador++;
+    }
+    i++
+  }
+  return numeros;
+}
+
+const qtdNumeros = 4;
+const divisiveis3 = fibonacci3(qtdNumeros);
+console.log(divisiveis3);

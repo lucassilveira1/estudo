@@ -113,3 +113,10 @@ console.log(convertToHex('black'))
 console.log(convertToHex('orange'))
 console.log(convertToHex('yellow'))
 console.log(convertToHex('purple'))
+
+var teste = 10;
+
+while ( teste <= 30) {
+  console.log(teste);
+  teste += 3;
+}
