@@ -81,7 +81,7 @@
     if (!isOperatorValid(operator)) {
       return false;
     }
-
+    
     return function (x, y) {
       if (typeof x !== 'number' || typeof y !== 'number') {
         return false;
@@ -228,12 +228,12 @@
   */
   
   operationSignal = 'x';
-  var teste = calculator( operationSignal );
+  var erro = calculator( operationSignal );
 
-  if ( teste ) {
+  if ( erro ) {
     number1 = 50;
     number2 = 25;
-    console.log( showOperationMessage(operationSignal, number1, number2), teste( number1, number2 ) )
+    console.log( showOperationMessage(operationSignal, number1, number2), erro( number1, number2 ) )
   }
   else {
     console.log(showErrorMessage( operationSignal ))
@@ -242,11 +242,16 @@
 
 
 
-
-  qualquer = (x, y) => {
-    return x + y;
-  }
-
   console.log(qualquer(2, 4))
 
 })();
+
+qualquer = (x, y) => {
+  if (isNaN(Number(x)) || isNaN(Number(y))) {
+     return false; 
+  }
+  return Number(x) + Number(y)
+}
+var input = '142'
+var x = Number(input)
+console.log(qualquer(Number('5'), Number('2')));

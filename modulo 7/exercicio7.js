@@ -76,7 +76,7 @@ Só vamos mudar o range:
 */
 console.log( 'Números pares entre 100 e 120:' );
 
-for(let numero = 100; numero <= 120; numero++) {
+for(let numero = 100; numero <= 120; numero+= 2) {
   numero % 2 === 0 ? console.log(numero) : '';
 }
 
