@@ -88,7 +88,7 @@
   chamada `newSudeste`.
   */
 
-  const newSudeste = brasil.splice(5, 8)
+  const newSudeste = brasil.splice(5)
 
   /*
   Adicione os estados do `nordeste` ao array `brasil`. Esses estados devem
@@ -119,13 +119,21 @@
   */
   
   const newBrasil = [];
-  brasil.forEach(function(item, index) {
+  brasil.forEach((item, index) => {
     newBrasil.push({
       id: index,
       estado: item
     });
   })
 
+    // let i = 0;
+    // for (const item of brasil) {
+    //   newBrasil.push({
+    //     id: i,
+    //     estado: item
+    //   });
+    //   i++
+    // }
   /*
   Mostre o array `newBrasil` no console
   */
@@ -171,7 +179,7 @@
   Atribua o novo array a uma variável chamada `map`.
   */
   
-  const map = newBrasil.map(function(item, index){
+  const map = newBrasil.map(function(item){
     
     return {
       id: item.id + 1,
@@ -192,9 +200,9 @@
   ID par. Atribua o valor à uma variável chamada `filter`.
   */
   
-  const filter = map.filter(function(item, index) {
+  const filter = map.filter(function(item) {
     return item.id % 2 === 0;
-  })
+  });
 
   /*
   Mostre o array filtrado acima no console.
