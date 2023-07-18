@@ -88,4 +88,5 @@
     console.log(`${leila.getFullName()} agora tem ${leila.getAge()} anos.`)
     lorenna.addAge(4);
     console.log(`${lorenna.getFullName()} agora tem ${lorenna.getAge()} anos.`)
+    
 })();
