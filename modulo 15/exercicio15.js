@@ -36,11 +36,11 @@
             return this.age;
         };
 
-        this.addAge = function addAge() {
-            this.age += arguments[0];
+        this.addAge = function addAge(newAge) {
+            this.age += newAge;
             return this;
         };
-    }
+    };
 
     /*
     Crie 3 novos objetos usando o construtor acima. Os objetos serão novas
@@ -68,13 +68,13 @@
 
     /*
     Mostre no console as idades de cada pessoa, com a frase:
-    - "[NOME COMPLETO] tem [IDADE] anos."
+    - "[NOME COMPLETO] tem [IDADE] anos." 
     */
     console.log( '\nIdade das pessoas:' );
     
     console.log(`${lucas.getFullName()} tem ${lucas.getAge()} anos.`)
     console.log(`${leila.getFullName()} tem ${leila.getAge()} anos.`)
-    console.log(`${lorenna.getFullName()} tem ${lorenna.getAge()} anos.`)
+    console.log(`${lorenna.getFullName()} tem ${lorenna.getAge()} anos.`);
 
     /*
     Adicione alguns anos à cada pessoa, e mostre no console a nova idade de
