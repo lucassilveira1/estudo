@@ -10,7 +10,8 @@
   Em todos os exercícios desse desafio, nós vamos utilizar expressões
   regulares! Para isso, iremos usar o texto abaixo. Coloque-o em uma
   variável chamada `text`:
-  "Manuel Marques de Sousa, Conde de Porto Alegre (Rio Grande, 13 de junho de 1804 – Rio de Janeiro, 18 de julho de 1875), apelidado de "O Centauro de Luvas", foi um militar, político, abolicionista e monarquista brasileiro."
+  "Manuel Marques de Sousa, Conde de Porto Alegre (Rio Grande, 13 de junho de 1804 – Rio de Janeiro, 18 de julho de 1875), apelidado de "O Centauro de Luvas", 
+  foi um militar, político, abolicionista e monarquista brasileiro."
   */
   // ?
 
@@ -23,7 +24,7 @@
   */
   console.log( 'Adicionando seu nome no texto:' );
   
-  var newText = text.replace('Manuel Marques de Sousa', 'Lucas Silveira');
+  var newText = text.replace(/Manuel Marques de Sousa/g, 'Lucas Silveira');
 
   /*
   Agora, substitua a palavra "brasileiro" por sua cidade natal e mostre no
@@ -138,7 +139,7 @@
   */
   console.log( '\nReplace de datas:' );
   
-  function replaceDate(regex, day, month, year) {
+  function replaceDate(regexDate, day, month, year) {
     return `${day}/${getMonthNumber(month)}/${year}`
   }
 
