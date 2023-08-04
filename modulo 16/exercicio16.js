@@ -19,7 +19,7 @@
 
   var name = 'lucas';
   for ( var i = 0, len = name.length; i < len; i++) {
-    console.log(`${name.charAt(i)} é a ${(i + 1)}ª letra do meu nome.`)
+    console.log(`${name[i]} é a ${(i + 1)}ª letra do meu nome.`)
   } 
   /*
   - Declare uma variável chamada `fullName`, que receba seu nome completo,
@@ -60,8 +60,9 @@
   console.log( '\nMeus amigos:' );
   
   var amigos = ['João', 'Maria', 'Roberto', 'Pedro', 'Marcos'];
+  var tamanhoArray = amigos.length;
   var frase = amigos.reduce(function(acumulado, atual, index) {
-    var separator = amigos.length - 1 === index ? ' e ' : ', ';
+    var separator = tamanhoArray - 1 === index ? ' e ' : ', ';
     return acumulado + separator + atual;
   }).concat(' são meus amigos.');
 
@@ -82,7 +83,7 @@
   */
   console.log( '\nParte de uma string:' );
   
-  console.log( 'Fernando'.substring(3) );
+  console.log( 'Fernando'.replace('nando', 'nanda').substring(3) );
 
   /*
   Declare uma variável chamada `myName`, que receba o seu primeiro nome,

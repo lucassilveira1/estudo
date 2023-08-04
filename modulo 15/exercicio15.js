@@ -23,21 +23,22 @@
     que será instanciado.
     */
     
-    function Person( name, lastName, age ) {
-        this.name = name;
-        this.lastName = lastName;
-        this.age = age;
-
-        this.getFullName = function getFullName() {
+    class Person {
+        constructor(name, lastName, age) {
+            this.name = name;
+            this.lastName = lastName;
+            this.age = age;
+        }
+        getFullName() {
             return this.name + ' ' + this.lastName;
         };
 
-        this.getAge = function getAge() {
+        getAge() {
             return this.age;
         };
 
-        this.addAge = function addAge(newAge) {
-            this.age += newAge;
+        addAge(incremento) {
+            this.age += incremento;
             return this;
         };
     };
