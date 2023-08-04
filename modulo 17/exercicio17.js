@@ -65,7 +65,7 @@
   */
   console.log( '\n"O Centauro de Luvas" em caixa alta:' );
 
-  console.log(text.replace(/O Centauro de Luvas/g, function(frase) {
+  console.log(newText.replace(/O Centauro de Luvas/g, function(frase) {
     return frase.toUpperCase();
   }));
 
@@ -143,5 +143,5 @@
     return `${day}/${getMonthNumber(month)}/${year}`
   }
 
-  console.log(text.replace(regexDate, replaceDate))
+  console.log(newText.replace(regexDate, replaceDate))
 })();
