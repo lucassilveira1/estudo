@@ -68,8 +68,8 @@ O resultado deve ser:
 */
 console.log( '\nMatch com a abertura de uma tag HTML:' );
 
-console.log( '<div><section><blockquote>Texto <img /></blockquote></section></div>'
-.match( /<\w+>/g ) )
+console.log( '<div class="oba" id="oi"><section><blockquote>Texto <img /></blockquote></section></div>'
+.match( /<\w+(\s+\w+=".+")*>/g ) )
 
 /*
 Crie uma expressão regular que faça o match com uma tag HTML vazia, casando
@@ -108,8 +108,10 @@ corretas, para depois aplicar no código ;)
 */
 console.log( '\nFazer replace dos textos das tags:' );
 
-console.log('<h1>Título da página</h1><p>Este é um parágrafo</p><footer>Rodapé</footer>'
+console.log('<h1>Título da página</div><p>Este é um parágrafo</p><footer>Rodapé</footer>'
   .replace(/<(\w+)>([^<]+)<\/\w+>/g, 
     '<$1>O texto dentro da tag "$1" é "$2"</$1>\n'))
 
+    var teste = /^[a-z0-9][a-z0-9._+]*@[a-z]+(.[a-z]+)+/
+    var a = /^\w[\w._+]/
 })();
